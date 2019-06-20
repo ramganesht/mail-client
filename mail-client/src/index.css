@@ -1,0 +1,165 @@
+.folders{
+	width: 150px;
+  display: inline-block;
+  background-color: lightgray;
+  padding: 10px;
+}
+.folders a{
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: inherit;
+  background-color: #fff;
+  border-top: solid 1px lightgrey;
+  font-size: 20px;
+}
+.folders a.active, .folders a:hover{
+  color: #fff;
+  background-color: #0f8bb4;
+}
+.mailListHolder{
+  display: inline-block;
+  width: calc(100% - 182px);
+  vertical-align: top;
+  margin-left: 5px;
+}
+.mailList{
+  display: inline-block;
+  width: 300px;
+  background-color: lightgrey;
+  padding: 10px;
+}
+.mailDetail{
+  display: inline-block;
+  width: calc(100% - 345px);
+  vertical-align: top;
+  border: solid 5px lightgrey;
+  margin: 0 5px 5px 5px;
+}
+.mail{
+  padding: 10px 10px 5px 10px;
+  background-color: #fff;
+  border-bottom: solid 1px lightgrey;
+  display: grid;
+  grid-template-areas: 'from from from delete' 'subject subject subject delete' 'date date date date';
+}
+.date{
+  grid-area: date;
+  text-align: right;
+  display: block;
+  padding: 5px;
+}
+.subject{
+  grid-area: subject;
+  font-weight: bold;
+  padding: 5px;
+}
+.from{
+  grid-area: from;
+  padding: 5px;
+}
+.deleteMail{
+  grid-area: delete;
+  margin: 10px;
+  color: #fff;
+  background-color: #0f8bb4;
+  border: none;
+  display: none;
+}
+.mail:hover .deleteMail{
+  display: block;
+}
+.mailSubject{
+  font-size: 48px;
+  font-weight: 500;
+  margin: 30px 10px 30px 10px;
+  padding-bottom: 20px;
+  border-bottom: solid 1px lightgrey;
+}
+.mailFrom{
+  padding-left: 10px;
+  font-weight: 600;
+}
+.mailTime{
+  padding-left: 10px;
+  font-weight: 600;
+  padding-bottom: 30px; 
+}
+.mailTo{
+  padding: 30px 0;
+  margin-left: 10px;
+  font-weight: 600;
+  border-top: solid 1px lightgrey;
+  border-bottom: solid 1px lightgrey;
+}
+.mailBody{
+  font-style: italic;
+  margin: 30px 10px;
+}
+.app-header{
+  font-size: 24px;
+  background-color: lightgrey;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+.app-header img{
+  height: 32px;
+  vertical-align: middle;
+}
+.compose-btn{
+  background-color: #0f8bb4;
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.mail-form{
+  background-color: lightgrey;
+  padding: 20px;
+  position: fixed;
+  width: calc(100% - 54px);
+  height: 100vh;
+}
+.mail-form input{
+    display: block;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    border: none;
+    width: calc(100% - 20px);
+}
+.mail-form textarea{
+    display: block;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    border: none;
+    width: calc(100% - 20px);
+}
+.mail-form .btn-holder{
+  display: flex;
+  justify-content: space-between;
+}
+.mail-form button{
+    border: none;
+    background-color: #2ea32e;
+    color: #fff;
+    padding: 10px 20px;
+}
+button{
+  cursor: pointer;
+  outline: none;
+}
+.close-icon-holder{
+  display: flex;
+  justify-content: flex-end;
+}
+.close-icon{
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.mail-form.show-form{
+  display: none;
+}
